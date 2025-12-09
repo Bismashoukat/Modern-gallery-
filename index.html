@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Modern Image Gallery</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+      <button class="pill active" data-cat="all">All</button>
+      <button class="pill" data-cat="nature">Nature</button>
+      <button class="pill" data-cat="city">City</button>
+      <button class="pill" data-cat="people">People</button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery" id="gallery">
+      <div class="card" data-cat="nature"><img src="images/nature.image1.jpg" alt="Misty Mountains"></div>
+      <div class="card" data-cat="city"><img src="images/city.image1.jpg" alt="City Neon Streets"></div>
+      <div class="card" data-cat="people"><img src="images/people.image1.jpg" alt="Smiling Child"></div>
+      <div class="card" data-cat="nature"><img src="images/nature.image2.jpg" alt="Forest Path"></div>
+      <div class="card" data-cat="city"><img src="images/city.image2.jpg" alt="Old Architecture"></div>
+      <div class="card" data-cat="people"><img src="images/people.image2.jpg" alt="Friends Laughing"></div>
+      <div class="card" data-cat="nature"><img src="images/nature.image3.jpg" alt="beautiful view"></div>
+      <div class="card" data-cat="people"><img src="images/people.image3.jpg" alt="beautiful view"></div>
+      <div class="card" data-cat="city"><img src="images/city.image3.jpg" alt="beautiful view"></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span id="closeBtn">×</span>
+    <img id="lightboxImg" src="">
+    <div class="nav">
+      <button id="prevBtn">◀</button>
+      <button id="nextBtn">▶</button>
+    </div>
+    <div class="lb-controls">
+      <label>Filter:</label>
+      <select id="lbFilter">
+        <option value="none">None</option>
+        <option value="grayscale">Grayscale</option>
+        <option value="sepia">Sepia</option>
+        <option value="blur">Blur</option>
+      </select>
+      <label>Zoom:</label>
+      <input type="range" id="zoomRange" min="100" max="200" value="100">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
